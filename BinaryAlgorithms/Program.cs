@@ -46,7 +46,7 @@ public class Program
 
 1. Count the amount of one's in a number's binary representation.
 2. Check if a number is a power of 2.
-3. Check if a particular bit (2^ith) is set in a number.
+3. Check if the bit at 2^ith is set in a number.
 4. Output all subsets of a given set.
 5. Find the largest power within a number.
 0. Exit.
@@ -75,7 +75,7 @@ public class Program
         break;
 
       case (int)MenuChoices.CheckBitSet:
-        //Call a static Program function CheckIfBitSet()
+        CheckIfBitIsSet(number);
         break;
 
       case (int)MenuChoices.OutputAllSubsets:
@@ -113,10 +113,28 @@ public class Program
   {
     Console.WriteLine("Checking if the number is a power of two...");
 
-
     if ((number & number - 1) == 0)
       Console.WriteLine($"The number {number} is a power of 2.");
     else
       Console.WriteLine($"The number {number} is not a power of 2.");
+  }
+  public static void CheckIfBitIsSet(int number)
+  {
+    Console.WriteLine("*Note*: 2^ith where (i - 1) == column position");
+    Console.Write("Enter the 2^ith bit to check if set: ");
+    int inputValue = Convert.ToInt32(Console.ReadLine());
+
+    int bitToCheck = (int)Math.Pow(2, inputValue);
+    if ((bitToCheck & (bitToCheck - 1)) != 0) throw new Exception();
+
+    Console.WriteLine();
+    Console.WriteLine($"Checking if the 2^{inputValue} bit is set in {number}...");
+
+    if ((number & bitToCheck) == bitToCheck)
+      Console.WriteLine($"The number {number} has the bit 2^{inputValue} set.");
+    else
+      Console.WriteLine($"The number {number} has the bit 2^{inputValue} unset.");
+
+    //Can also be done with (~number & bitToCheck) == 0
   }
 }
