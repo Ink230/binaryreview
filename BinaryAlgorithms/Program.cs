@@ -24,7 +24,8 @@ public class Program
         MenuSelector(choice, number);
 
         Console.WriteLine();
-        Console.WriteLine("Hit any key to continue.");
+        Console.WriteLine();
+        Console.WriteLine("Enter any key to continue.");
         Console.ReadLine();
         Console.Clear();
       }
@@ -32,7 +33,7 @@ public class Program
       {
         Console.WriteLine();
         Console.WriteLine("Invalid numeric integer input");
-        Console.WriteLine("Hit any key to continue.");
+        Console.WriteLine("Enter any key to continue.");
         Console.ReadLine();
         Console.Clear();
       }
@@ -61,6 +62,7 @@ public class Program
     Console.Write($"{number} as binary is ");
     Print(number);
     Console.WriteLine();
+    Console.WriteLine();
 
     switch (choice)
     {
@@ -69,7 +71,7 @@ public class Program
         break;
 
       case (int)MenuChoices.CheckPowerOfTwo:
-        //Call a static Program function PowerOfTwo()
+        CheckPowerOfTwo(number);
         break;
 
       case (int)MenuChoices.CheckBitSet:
@@ -106,5 +108,15 @@ public class Program
     Console.WriteLine();
     Console.WriteLine($"The number of one's in {initial} is: {count}");
     Print(initial);
+  }
+  public static void CheckPowerOfTwo(int number)
+  {
+    Console.WriteLine("Checking if the number is a power of two...");
+
+
+    if ((number & number - 1) == 0)
+      Console.WriteLine($"The number {number} is a power of 2.");
+    else
+      Console.WriteLine($"The number {number} is not a power of 2.");
   }
 }
