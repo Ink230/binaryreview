@@ -36,7 +36,7 @@ public class Program
       catch
       {
         Console.WriteLine();
-        Console.WriteLine("Invalid numeric integer input");
+        Console.WriteLine("Invalid numeric integer (signed 32-bit) input");
         Console.WriteLine("Enter any key to continue.");
         Console.ReadLine();
         Console.Clear();
@@ -87,7 +87,7 @@ public class Program
         break;
 
       case (int)MenuChoices.LargestPowerOfTwo:
-        //Call a static Program function LargestPowerOfTwo()
+        LargestPowerOfTwo(number);
         break;
 
       default:
@@ -169,5 +169,21 @@ public class Program
       }
       Console.WriteLine();
     }
+  }
+
+  public static void LargestPowerOfTwo(int number)
+  {
+    Console.WriteLine("Checking for the largest power of 2 present in the number...");
+
+    int value = number;
+
+    value |= value >> 1;
+    value |= value >> 2;
+    value |= value >> 4;
+    value |= value >> 8;
+    value |= value >> 16; //limit for int32 binary representations
+
+    value = (value + 1) >> 1;
+    Console.WriteLine($"The largest power of 2 in {number} is {value}.");
   }
 }
