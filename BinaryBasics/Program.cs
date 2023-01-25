@@ -7,6 +7,7 @@ public class Program
     int numberOne = Convert.ToInt32(Console.ReadLine());
     int numberTwo = Convert.ToInt32(Console.ReadLine());
 
+    Console.WriteLine();
     Console.WriteLine($"{numberOne} is represented as:");
     Print(numberOne);
 
