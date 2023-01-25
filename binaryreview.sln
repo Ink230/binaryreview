@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitHelper", "BitHelper\BitH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryAlgorithms", "BinaryAlgorithms\BinaryAlgorithms.csproj", "{69371B43-44F3-4273-B20F-F31A03E6C83D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitFlags", "BitFlags\BitFlags.csproj", "{AE2C4156-A607-4FC2-8D0D-3294648BCEF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE2C4156-A607-4FC2-8D0D-3294648BCEF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2C4156-A607-4FC2-8D0D-3294648BCEF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2C4156-A607-4FC2-8D0D-3294648BCEF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2C4156-A607-4FC2-8D0D-3294648BCEF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
