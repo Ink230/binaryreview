@@ -11,15 +11,19 @@ public class Program
 
     while (loop)
     {
+      number = 0;
       try
       {
         choice = Menu();
         if (choice == 0) loop = false;
         Console.WriteLine();
 
-        Console.Write("Enter a number to use: ");
-        number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine();
+        if (choice != (int)MenuChoices.OutputAllSubsets)
+        {
+          Console.Write("Enter a number to use: ");
+          number = Convert.ToInt32(Console.ReadLine());
+          Console.WriteLine();
+        }
 
         MenuSelector(choice, number);
 
@@ -79,7 +83,7 @@ public class Program
         break;
 
       case (int)MenuChoices.OutputAllSubsets:
-        //Call a static Program function OutputAllSubsets()
+        OutputAllSubsets();
         break;
 
       case (int)MenuChoices.LargestPowerOfTwo:
@@ -120,7 +124,7 @@ public class Program
   }
   public static void CheckIfBitIsSet(int number)
   {
-    Console.WriteLine("*Note*: 2^ith where (i - 1) == column position");
+    Console.WriteLine("Note: 2^ith where (i - 1) == column position");
     Console.Write("Enter the 2^ith bit to check if set: ");
     int inputValue = Convert.ToInt32(Console.ReadLine());
 
@@ -136,5 +140,34 @@ public class Program
       Console.WriteLine($"The number {number} has the bit 2^{inputValue} unset.");
 
     //Can also be done with (~number & bitToCheck) == 0
+  }
+  public static void OutputAllSubsets()
+  {
+    Console.WriteLine("Warning: >12 N in a set can take a very long time to compute.");
+    Console.WriteLine("Warning: The subsets will all be output to the console.");
+    Console.WriteLine();
+    Console.WriteLine("Ex sets: A,B,C || 1,2,3 || a,2,f || @,7,*");
+    Console.Write("Enter a comma separated string to represent a set: ");
+    string? input = Console.ReadLine();
+    string[] set;
+
+    if (!string.IsNullOrEmpty(input))
+      set = input.Trim().Replace(" ", "").Split(",");
+    else
+      throw new Exception();
+
+    Console.WriteLine();
+
+    for (int i = 0; i < (1 << set.Length); i++)
+    {
+      for (int j = 0; j < set.Length; j++)
+      {
+        if ((i & (1 << j)) != 0)
+          Console.Write($"{set[j]} ");
+        else
+          Console.Write("- ");
+      }
+      Console.WriteLine();
+    }
   }
 }
