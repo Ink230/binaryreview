@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryBasics", "BinaryBasics\BinaryBasics.csproj", "{615B4563-4118-4651-B0F5-3E6E49C41329}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitHelper", "BitHelper\BitHelper\BitHelper.csproj", "{D9BB1188-EF30-4E01-A900-163B10B95B45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitHelper", "BitHelper\BitHelper\BitHelper.csproj", "{D9BB1188-EF30-4E01-A900-163B10B95B45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryAlgorithms", "BinaryAlgorithms\BinaryAlgorithms.csproj", "{69371B43-44F3-4273-B20F-F31A03E6C83D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D9BB1188-EF30-4E01-A900-163B10B95B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9BB1188-EF30-4E01-A900-163B10B95B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9BB1188-EF30-4E01-A900-163B10B95B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69371B43-44F3-4273-B20F-F31A03E6C83D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
