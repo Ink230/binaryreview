@@ -7,8 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BitHelper\BitHelper\BitHelper.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\BitHelper\BitHelper.csproj" />
+	</ItemGroup>
 
 </Project>
